@@ -1,6 +1,9 @@
 /* Import node's http module: */
 var http = require("http");
-var results = require('./myRequireFile.js');
+var results = require('./request-handler.js');
+
+var h = new results(111,222);
+console.log(h);
 
 /* This is the callback function that will be called each time a
  * client (i.e.. a web browser) makes a request to our server. */
@@ -33,7 +36,7 @@ var requestListener = function (request, response) {
    * anything back to the client until you do. The string you pass to
    * response.end() will be the body of the response - i.e. what shows
    * up in the browser.*/
-  response.end(results.x.printToConsole());
+  response.end('hello wrrld: ' + h.response + ', ' + h.request);
 };
 
 /* These headers will allow Cross-Origin Resource Sharing.

@@ -4,6 +4,12 @@
  * from this file and include it in basic-server.js. Check out the
  * node module documentation at http://nodejs.org/api/modules.html. */
 
-var handleRequest = function(request, response) {
-
+var HandleRequest = function(request, response) {
+  this.request = request;
+  this.response = response;
+  console.log(this.request, this.response);
+  return this.request + ', ' + this.response;
 };
+
+module.exports = HandleRequest;
+
