@@ -4,4 +4,4 @@ exports.x = {
     console.log(this.text);
     return this.text;
   }
-}
+};
