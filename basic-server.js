@@ -1,6 +1,5 @@
 /* Import node's http module: */
 var http = require("http");
-var defaultCorsHeaders = require('./defaultCorsHeaders.js');
 var requestHandler = require('./request-handler.js');
 
 var port = 8080;
@@ -9,3 +8,4 @@ var server = http.createServer(requestHandler);
 
 console.log("Listening on http://" + ip + ":" + port);
 server.listen(port, ip);
+
